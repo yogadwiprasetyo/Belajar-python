@@ -96,30 +96,10 @@ def tgllhr():
 	# output data input user
 	print(Datalahir.items())
 
-
 tgllhr()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# latihan ini baru sampai membuat kerangka fungsi jurusan
+# fungsi tanggal lahir belum selesai
 
 # #######################################################################################################
 # PROBLEM
@@ -136,6 +116,4 @@ tgllhr()
 
 # NOT SOLVE
 # #######################################################################################################
-# PROBLEM
-# 5. 
 
