@@ -64,42 +64,94 @@
 # 	IP_Sem_1, IP_Sem_2, IP_Sem_3, IP_Sem_4, IP_Sem_5, IP_Sem_6, IP_Sem_7, IP_Sem_8
 # deklarasikan 1 variabel bertipe mahasiswa dengan nama variabel adalah nama kalian
 
-# NOT SOLVE
+# # FUNGSI SUDAH SIAP
 # # FUNGSI MENENTUKAN JURUSAN DENGAN KODE
-# def jurusan(inp):
-# 	Kodejurusan = ['FTKI', 'FEB', 'FISIP']
-# 	if inp == 1:
-# 		print(Kodejurusan[0])
-# 	elif inp == 2:
-# 		print(Kodejurusan[1])
-# 	elif inp == 3:
-# 		print(Kodejurusan[2])
+# def jurusan():
+# 	# input user
+# 	# meminta input kode jurusan
+# 	inpKode = int(input("Masukkan kode jurusan: "))
 
-# FUNGSI TANGGAL LAHIR
-def tgllhr():
-	# input user
-	it = input('Masukkan tgl:')
-	ib = input('Masukkan bulan:')
-	ith = input('Masukkan tahun:')
+# 	# data list
+# 	# list sebagai tempat nama jurusan
+# 	Kodejurusan = ['Teknik Informatika', 'Manajemen', 'Ilmu Komunikasi']
 
-	# cek input user 
-	if it > 31:
-		print('tgl tidak tersedia')
-	elif ib > 12:
-		print('bulan tidak tersedia')
-	elif ith > 2010:
-		print('tahun yang anda masukkan tidak masuk akal')
+# 	# proses dan output
+# 	# jika input user sama dengan kode jurusan, tampilkan nama jurusan
+# 	if inpKode == 1:
+# 		print("Jurusan: {}".format(Kodejurusan[0]))
+# 	elif inpKode == 2:
+# 		print("Jurusan: {}".format(Kodejurusan[1]))
+# 	elif inpKode == 3:
+# 		print("Jurusan: {}".format(Kodejurusan[2]))
+# 	else:
+# 		print("kode yang dimasukkan tidak cocok!")
 
-	# data input user
-	Datalahir = {'tgl': int(it), 'bln':int(ib), 'thn':int(ith)}
 
-	# output data input user
-	print(Datalahir.items())
+# # FUNGSI SUDAH SIAP
+# # FUNGSI TANGGAL LAHIR
+# def tgllhr():
+# 	# data list
+# 	# menampung tanggal lahir user
+# 	Tgl_lahir = []
 
-tgllhr()
+# 	# input user
+# 	# memasukkan tanggal,bulan dan tahun lahir
+# 	it = int(input('Masukkan tanggal:'))
+# 	ib = raw_input('Masukkan nama bulan:')
+# 	ith = int(input('Masukkan tahun:'))
 
-# latihan ini baru sampai membuat kerangka fungsi jurusan
-# fungsi tanggal lahir belum selesai
+# 	# cek input user 
+# 	# jika tanggal dan tahun yang dimasukkan melebihi batas, tampilkan pesan warning!
+# 	if it > 31:
+# 		print('tanggal yang dimasukkan melebihi batas')
+# 	elif ith > 2010:
+# 		print('tahun yang dimasukkan melebihi batas')
+# 	else:
+# 		Tgl_lahir.append(it)
+# 		Tgl_lahir.append(ib)
+# 		Tgl_lahir.append(ith)
+
+# 	# output 
+# 	# data input user
+# 	if len(Tgl_lahir) == 0 :
+# 		print("Tanggal lahir: {}".format(Tgl_lahir[:]))
+# 	else:
+# 		print("Tanggal lahir: {} {} {}".format(Tgl_lahir[0],Tgl_lahir[1],Tgl_lahir[2]))
+	
+
+# # FUNGSI SUDAH SIAP
+# # FUNGSI IP_SEMESTER
+# def ip():
+# 	# membuat list sebagai tempat untuk nilai ip semester
+# 	Ips = []
+# 	# melakukan looping untuk meminta input nilai user
+# 	while True:
+# 		for i in range(1, 9, 1):
+# 			nilai = float(input("Masukkan nilai Ip Semester ke-{}: ".format(i)))
+# 			#jika nilai ip melebihi batas, ulangi looping dari awal
+# 			if nilai > 4.0:
+# 				print("nilai IP yang kamu masukkan melebihi batas \nTOLONG ULANGI PENGISISAN!")
+# 				i = 1
+# 				break
+# 			else: 
+# 				Ips.append(nilai)
+# 		else:
+# 			break
+
+# 	# menampilkan nilai ips dari input user
+# 	for i,n in enumerate(Ips):
+# 		print("Nilai Ip Semester ke-{}: {}".format(i+1,n))
+
+# # FUNGSI SUDAH SIAP
+# jurusan()
+# # FUNGSI SUDAH SIAP
+# tgllhr()
+# FUNGSI SUDAH SIAP
+# ip()
+
+# fungsi jurusan, tanggal lahir dan ip semester sudah dibuat algoritmanya
+# berarti tinggal membuat fungsi Mahasiswa dan total sks
+# algoritma dari ketiga fungsi itu sudah siap, tinggal menentukan perubahan pada fungsi Mahasiswa
 
 # #######################################################################################################
 # PROBLEM
