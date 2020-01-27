@@ -64,94 +64,171 @@
 # 	IP_Sem_1, IP_Sem_2, IP_Sem_3, IP_Sem_4, IP_Sem_5, IP_Sem_6, IP_Sem_7, IP_Sem_8
 # deklarasikan 1 variabel bertipe mahasiswa dengan nama variabel adalah nama kalian
 
-# # FUNGSI SUDAH SIAP
-# # FUNGSI MENENTUKAN JURUSAN DENGAN KODE
-# def jurusan():
-# 	# input user
-# 	# meminta input kode jurusan
-# 	inpKode = int(input("Masukkan kode jurusan: "))
+# SOLVE
+# FUNGSI JURUSAN
+# AWAL FUNGSI
+def jurusan():
+	# input user
+	# meminta input kode jurusan
+	inpKode = int(input('Masukkan kode jurusan: '))
 
-# 	# data list
-# 	# list sebagai tempat nama jurusan
-# 	Kodejurusan = ['Teknik Informatika', 'Manajemen', 'Ilmu Komunikasi']
+	# data list
+	# list sebagai tempat nama jurusan
+	Kodejurusan = ['Teknik Informatika', 'Manajemen', 'Ilmu Komunikasi']
 
-# 	# proses dan output
-# 	# jika input user sama dengan kode jurusan, tampilkan nama jurusan
-# 	if inpKode == 1:
-# 		print("Jurusan: {}".format(Kodejurusan[0]))
-# 	elif inpKode == 2:
-# 		print("Jurusan: {}".format(Kodejurusan[1]))
-# 	elif inpKode == 3:
-# 		print("Jurusan: {}".format(Kodejurusan[2]))
-# 	else:
-# 		print("kode yang dimasukkan tidak cocok!")
+	# proses 
+	# jika input user sama dengan kode jurusan, tampilkan nama jurusan
+	if inpKode == 1:
+		# print("Jurusan: {}".format(Kodejurusan[0]))
+		output = Kodejurusan[0]
+	elif inpKode == 2:
+		# print("Jurusan: {}".format(Kodejurusan[1]))
+		output = Kodejurusan[1]
+	elif inpKode == 3:
+		# print("Jurusan: {}".format(Kodejurusan[2]))
+		output = Kodejurusan[2]
+	else:
+		# print("kode yang dimasukkan tidak cocok!")
+		output = 'kode yang dimasukkan tidak cocok!'
+
+	# output
+	# menghasilkan output dari proses diatas dengan return
+	return output
+# AKHIR FUNGSI
 
 
-# # FUNGSI SUDAH SIAP
-# # FUNGSI TANGGAL LAHIR
-# def tgllhr():
-# 	# data list
-# 	# menampung tanggal lahir user
-# 	Tgl_lahir = []
+# FUNGSI TANGGAL LAHIR
+# AWAL FUNGSI
+def tgllhr():
+	# data list
+	# menampung tanggal lahir user
+	Tgl_lahir = []
 
-# 	# input user
-# 	# memasukkan tanggal,bulan dan tahun lahir
-# 	it = int(input('Masukkan tanggal:'))
-# 	ib = raw_input('Masukkan nama bulan:')
-# 	ith = int(input('Masukkan tahun:'))
+	# input user
+	# memasukkan tanggal,bulan dan tahun lahir
+	print('===Masukkan Tanggal Lahir===')
+	it = int(input('Tanggal: '))
+	ib = raw_input('Nama Bulan: ')
+	ith = int(input('Tahun: '))
 
-# 	# cek input user 
-# 	# jika tanggal dan tahun yang dimasukkan melebihi batas, tampilkan pesan warning!
-# 	if it > 31:
-# 		print('tanggal yang dimasukkan melebihi batas')
-# 	elif ith > 2010:
-# 		print('tahun yang dimasukkan melebihi batas')
-# 	else:
-# 		Tgl_lahir.append(it)
-# 		Tgl_lahir.append(ib)
-# 		Tgl_lahir.append(ith)
+	# cek input user 
+	# jika tanggal dan tahun yang dimasukkan melebihi batas, tampilkan pesan warning!
+	if it > 31:
+		print('tanggal yang dimasukkan melebihi batas')
+	elif ith > 2010:
+		print('tahun yang dimasukkan melebihi batas')
+	else:
+		Tgl_lahir.append(it)
+		Tgl_lahir.append(ib)
+		Tgl_lahir.append(ith)
 
-# 	# output 
-# 	# data input user
-# 	if len(Tgl_lahir) == 0 :
-# 		print("Tanggal lahir: {}".format(Tgl_lahir[:]))
-# 	else:
-# 		print("Tanggal lahir: {} {} {}".format(Tgl_lahir[0],Tgl_lahir[1],Tgl_lahir[2]))
-	
+	# cek data input user 
+	# mengisi variabel output dengan nilai data list
+	if len(Tgl_lahir) == 0 :
+		# print('Tanggal lahir: {}'.format(Tgl_lahir[:]))
+		output = Tgl_lahir[:]
+	else:
+		# print('Tanggal lahir: {} {} {}'.format(Tgl_lahir[0],Tgl_lahir[1],Tgl_lahir[2]))
+		output = Tgl_lahir[:]
 
-# # FUNGSI SUDAH SIAP
-# # FUNGSI IP_SEMESTER
-# def ip():
-# 	# membuat list sebagai tempat untuk nilai ip semester
-# 	Ips = []
-# 	# melakukan looping untuk meminta input nilai user
-# 	while True:
-# 		for i in range(1, 9, 1):
-# 			nilai = float(input("Masukkan nilai Ip Semester ke-{}: ".format(i)))
-# 			#jika nilai ip melebihi batas, ulangi looping dari awal
-# 			if nilai > 4.0:
-# 				print("nilai IP yang kamu masukkan melebihi batas \nTOLONG ULANGI PENGISISAN!")
-# 				i = 1
-# 				break
-# 			else: 
-# 				Ips.append(nilai)
-# 		else:
-# 			break
+	# output
+	# menghasilkan output dari proses cek data input user dengan return
+	return output
+# AKHIR FUNGSI
 
-# 	# menampilkan nilai ips dari input user
-# 	for i,n in enumerate(Ips):
-# 		print("Nilai Ip Semester ke-{}: {}".format(i+1,n))
 
-# # FUNGSI SUDAH SIAP
-# jurusan()
-# # FUNGSI SUDAH SIAP
-# tgllhr()
-# FUNGSI SUDAH SIAP
-# ip()
+# FUNGSI IP_SEMESTER
+# AWAL FUNGSI
+def ip():
+	# membuat data list sebagai tempat untuk nilai ip semester
+	Ips = []
+	# melakukan looping untuk meminta input nilai user
+	while True:
+		for i in range(1, 9, 1):
+			nilai = float(input('Masukkan nilai Ip Semester ke-{}: '.format(i)))
+			#jika nilai ip melebihi batas, ulangi looping dari awal
+			if nilai > 4.0:
+				print('nilai IP yang kamu masukkan melebihi batas \nTOLONG ULANGI PENGISISAN!')
+				i = 1
+				Ips = []
+				break
+			else: 
+				Ips.append(nilai)
+		else:
+			break
 
-# fungsi jurusan, tanggal lahir dan ip semester sudah dibuat algoritmanya
-# berarti tinggal membuat fungsi Mahasiswa dan total sks
-# algoritma dari ketiga fungsi itu sudah siap, tinggal menentukan perubahan pada fungsi Mahasiswa
+	# # menampilkan nilai ips dari input user
+	# for i,n in enumerate(Ips):
+	# 	print('Nilai Ip Semester ke-{}: {}'.format(i+1,n))
+
+	# output
+	# mengembalikan data input user dengan return
+	return Ips
+# AKHIR FUNGSI
+
+
+# FUNGSI MAHASISWA
+# AWAL FUNGSI
+def mahasiswa():
+	# looping
+	# bertujuan untuk melakukan pengisian data, dengan batas yang diinginkan
+	while True:
+		# input user
+		# menanyakan mulai isi data atau tidak
+		inputData = raw_input('input data? (y/n)')
+		# jika input user = y, lakukan statement dibawah
+		if inputData is 'y' :
+			# input user 
+			# mengisi data lengkap
+			namaMhs = raw_input('Nama: ')
+			nimMhs = input('Nim: ')
+			jurusanMhs = jurusan()
+			asalMhs = raw_input('Asal: ')
+			tgllhrMhs = tgllhr()
+			ipsemesterMhs = ip()
+			totalsksMhs = input('SKS(24/20/18): ')
+
+			# # data list
+			# # menyimpan data user
+			# Data_User = [namaMhs, nimMhs, jurusanMhs, asalMhs, tgllhrMhs, ipsemesterMhs, totalsksMhs]
+			
+			# # data dictionary
+			# # menyimpan data user
+			# Data_User = {'nama':namaMhs, 'nim': nimMhs, 'jurusan': jurusanMhs, 'asal': asalMhs, 'tgllhr': tgllhrMhs, 'ips': ipsemesterMhs, 'sks': totalsksMhs}
+
+			# output
+			# menampilan data input user
+			print('===== DATA MAHASISWA =====')
+			print('Nama: {}'.format(namaMhs))
+			print('Nim: {}'.format(nimMhs))
+			print('Jurusan: {}'.format(jurusanMhs))
+			print('Asal: {}'.format(asalMhs))
+			print('Tanggal Lahir: {} {} {}'.format(tgllhrMhs[0],tgllhrMhs[1],tgllhrMhs[2]))
+			for i,n in enumerate(ipsemesterMhs):
+				print('Nilai Ip Semester ke-{}: {}'.format(i+1,n))
+			print('Total SKS: {}'.format(totalsksMhs))
+		# jika input user = n, maka keluar dari looping
+		elif inputData is 'n' :
+			break
+		else:
+			print('kamu belum memasukkan input y/n')
+
+# fungsi mahasiswa
+mahasiswa()
+
+# KEKURANGAN
+# output fungsi mahasiswa masih dari hasil input user
+# output fungsi mahasiswa belum disimpan ke data
+# output fungsi mahasiswa hanya bisa menampilkan satu data
+# data tidak saling berhubungan antar satu sama lain
+# terlalu banyak menggunakan if elif, semua fungsi menggunakannya
+# penamaan variabel, data list dan fungsi masih belum optimal
+# pada fungsi tgllhr, logika masih belum sempurna
+
+# KELEBIHAN
+# sudah memakai data list
+# sudah menggunakan fungsi di dalam fungsi
+# sudah menggunakan looping di dalam logika fungsi
 
 # #######################################################################################################
 # PROBLEM
