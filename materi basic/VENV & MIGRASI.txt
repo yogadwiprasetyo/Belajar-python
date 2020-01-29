@@ -1,0 +1,17 @@
+	VIRTUAL ENVIRONTMENT
+1. Membuat folder virtual environtmet
+   python3 -m venv namafolder
+
+2. Merubah python di komputer ke folder venv
+   Mac/Linux = source namafoldervenv/bin/activate
+   Windows = namafoldervenv/Scripts/activate.bat
+
+3. Keluar dari folder venv
+   deactivate
+
+	MIGRASI
+1. Migrasi dari foldervenv ke foldervenv lain
+   pip freeze --local > namafile.txt
+
+2. Install package dari namafile.txt
+   pip install -r namafile.txt
